@@ -1,15 +1,14 @@
 #/usr/bin/env python3
 
 import sympy
+from latex2sympy.process_latex import process_sympy
 
 def parse_expression(latex_string):
-    x = sympy.sympify(latex_string)
-    return type(x)
+    return sympy.sympify(process_sympy(latex_string))
 
 
 def main():
     while True:
-        print(parse_expression(input("enter latex string: ")))
-    return 0
+        print(sympy.dsolve(parse_expression(input("enter latex string: ")), sympy.abc.x))
 
 main()
