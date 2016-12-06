@@ -1,3 +1,4 @@
 [submodule "latex2sympy"]
 	path = latex2sympy
 	url = git@github.com:PiCalc/latex2sympy.git
+	branch = master
